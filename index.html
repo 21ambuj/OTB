@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME PAGE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  
+
+  
+  <!-- HEADER SECTION -->
+<header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-pink-600 via-rose-500 to-red-500 shadow-xl p-3 flex items-center justify-between">
+  <div class="flex items-center space-x-5">
+    <img src="ambuj5.png" alt="Profile Logo" class="w-14 h-14 rounded-full shadow-lg hover:scale-110 ">
+    
+    <h2 class="text-3xl font-extrabold text-white tracking-widest uppercase drop-shadow-xl  hover:scale-110">
+      Ticket-Lelo
+    </h2>
+  </div>
+   <!-- SEARCH BAR IN HEADER -->
+   <div class="hidden md:flex items-center bg-white/20 backdrop-blur-lg rounded-lg px-6  shadow-md w-1/2">
+    <input type="text" placeholder="Search events..." 
+      class="px- py-2 bg-transparent text-white placeholder-white focus:outline-none w-full">
+    <button class="ml-2 py-2 px-4 text-white font-bold rounded-md hover:bg-red-600 transition">
+      🔍
+    </button>
+  </div>
+
+
+  <nav class="hidden md:flex space-x-6">
+    <a href="#" class="text-white hover:scale-110 font-bold hover:text-yellow-400 transition duration-200">Home</a>
+    <a href="#" class="text-white hover:scale-110 font-bold hover:text-yellow-400 transition duration-200">Events</a>
+    <a href="#" class="text-white hover:scale-110 font-bold hover:text-yellow-400 transition duration-200">Contact</a>
+
+    <a href="signup.html" class="bg-yellow-400 hover:scale-110 text-black font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/50 transition">
+      Signup
+    </a>
+    <a href="login.html" class="bg-yellow-400 hover:scale-110 text-black font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 hover:shadow-lg hover:shadow-yellow-500/50 transition">
+      Login
+    </a>
+  </nav>
+</header>
+<!-- HEADER SECTION END -->
+
+  
+
+  <!-- HERO SECTION -->
+<section class="relative h-96 flex items-center justify-center text-white bg-gradient-to-r from-rose-500 to-pink-500">
+  <div class="text-center">
+    <h1 class="text-5xl font-bold animate-bounce">Book Your Tickets Now!</h1>
+    <p class="text-lg mt-2">Movies, Concerts, Sports & More</p>
+    <a href="#events" class="mt-6 inline-block hover:scale-110 px-6 py-3 bg-yellow-400 text-black rounded-lg hover:bg-yellow-600">Explore Now</a>
+  </div>
+</section>
+
+<!-- SLIDE SECTION -->
+<section class="flex items-center justify-center bg-gradient-to-r from-rose-500 to-pink-500 py-10">
+  <div class="relative w-full max-w-4xl overflow-hidden">
+    <!-- Carousel Container -->
+    <div id="carousel" class="carousel-track flex gap-4 overflow-x-auto scroll-smooth">
+      <!-- Card 1 -->
+      <a href="https://example.com/1" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-400 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+        <h2 class="text-3xl font-bold">Card 1</h2>
+        <p class="text-black mt-4 text-lg">Click to visit Page 1</p>
+      </a>
+      <!-- Card 2 -->
+      <a href="https://example.com/2" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-500 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+        <h2 class="text-3xl font-bold">Card 2</h2>
+        <p class="text-black mt-4 text-lg">Click to visit Page 2</p>
+      </a>
+      <!-- Card 3 -->
+      <a href="https://example.com/3" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-600 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+        <h2 class="text-3xl font-bold">Card 3</h2>
+        <p class="text-black mt-4 text-lg">Click to visit Page 3</p>
+      </a>
+      <!-- Card 4 -->
+      <a href="https://example.com/4" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-700 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+        <h2 class="text-3xl font-bold">Card 4</h2>
+        <p class="text-black mt-4 text-lg">Click to visit Page 4</p>
+      </a>
+      <!-- Card 5 -->
+      <a href="https://example.com/5" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-800 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+        <h2 class="text-3xl font-bold">Card 5</h2>
+        <p class="text-black mt-4 text-lg">Click to visit Page 5</p>
+      </a>
+    </div>
+  </div>
+  <style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .carousel-track {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  </style>
+</section>
+
+
+
+ 
+
+  
+  <!-- QUOTE SECTION -->
+<section class="py-12 flex justify-center items-center bg-gradient-to-r from-rose-500 to-pink-500 text-white">
+  <div class="max-w-3xl mx-auto p-8 rounded-xl shadow-lg bg-white/30  border hover:scale-105 border-white/20 text-center">
+      <h2 class="text-2xl font-bold tracking-wide italic">
+          "Your Gateway to <span>Unforgettable Experiences!</span> 🎟✨"
+      </h2>
+  </div>
+</section>
+  <!-- QUOTE SECTION END-->
+
+ <!-- UPCOMING EVENTS SECTION -->
+<section class="py-16 bg-gradient-to-r from-rose-500 to-pink-500 text-white">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold uppercase tracking-widest mb-8">Upcoming Events</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Event Card 1 -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-lg shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-2xl font-bold mb-3">🎶 Music Fest 2024</h3>
+        <p class="text-lg">Experience the biggest music festival with top artists performing live!</p>
+        <p class="mt-3 font-semibold">📅 15th March 2024 | 📍 Mumbai</p>
+        <a href="#" class="mt-4 inline-block bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg hover:bg-yellow-500 transition">Book Now</a>
+      </div>
+
+      <!-- Event Card 2 -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-lg shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-2xl font-bold mb-3">🏆 Esports Championship</h3>
+        <p class="text-lg">Compete in the ultimate gaming battle and win exciting prizes!</p>
+        <p class="mt-3 font-semibold">📅 5th April 2024 | 📍 Bangalore</p>
+        <a href="#" class="mt-4 inline-block bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg hover:bg-yellow-500 transition">Register Now</a>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-lg shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-2xl font-bold mb-3">🎭 Stand-Up Comedy Night</h3>
+        <p class="text-lg">Laugh out loud with top comedians performing live on stage!</p>
+        <p class="mt-3 font-semibold">📅 22nd April 2024 | 📍 Delhi</p>
+        <a href="#" class="mt-4 inline-block bg-yellow-400 text-black font-bold px-4 py-2 rounded-lg hover:bg-yellow-500 transition">Get Tickets</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- UPCOMING EVENTS SECTION END-->
+
+<!-- ONGOING EVENTS SECTION -->
+<section class="py-16 bg-gradient-to-r from-rose-500 to-pink-500 text-white">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold uppercase tracking-widest mb-12">Ongoing Events</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Concerts & Music Festivals -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-xl font-bold text-yellow-300">🎵 Concerts & Music Festivals</h3>
+        <p class="text-sm mt-2">Experience live performances from top artists!</p>
+        <p class="mt-2"><strong>Date:</strong> March 15, 2025</p>
+        <p><strong>Time:</strong> 7:00 PM</p>
+        <p><strong>Venue:</strong> XYZ Arena, New York</p>
+        <button class="mt-4 px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-500 transition">Book Now</button>
+      </div>
+
+      <!-- Sports Events -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-xl font-bold text-green-300">🏆 Football Match</h3>
+        <p class="text-sm mt-2">Watch your favorite teams compete live!</p>
+        <p class="mt-2"><strong>Date:</strong> April 5, 2025</p>
+        <p><strong>Time:</strong> 6:00 PM</p>
+        <p><strong>Venue:</strong> Wembley Stadium, London</p>
+        <button class="mt-4 px-4 py-2 bg-green-400 text-black font-bold rounded-lg hover:bg-green-500 transition">Book Now</button>
+      </div>
+
+      <!-- Tech Conference -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-xl font-bold text-blue-300">💻 Tech Conference</h3>
+        <p class="text-sm mt-2">Discover the latest trends in AI & Technology.</p>
+        <p class="mt-2"><strong>Date:</strong> May 10, 2025</p>
+        <p><strong>Time:</strong> 10:00 AM</p>
+        <p><strong>Venue:</strong> Silicon Valley Expo Center</p>
+        <button class="mt-4 px-4 py-2 bg-blue-400 text-black font-bold rounded-lg hover:bg-blue-500 transition">Register</button>
+      </div>
+
+      <!-- Food Festival -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-xl font-bold text-red-300">🍔 Food & Drink Festival</h3>
+        <p class="text-sm mt-2">Enjoy a variety of cuisines and drinks!</p>
+        <p class="mt-2"><strong>Date:</strong> June 20, 2025</p>
+        <p><strong>Time:</strong> 1:00 PM</p>
+        <p><strong>Venue:</strong> Central Park, NYC</p>
+        <button class="mt-4 px-4 py-2 bg-red-400 text-black font-bold rounded-lg hover:bg-red-500 transition">Register</button>
+      </div>
+
+      <!-- Adventure Sports -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-xl font-bold text-purple-300">🏕 Adventure Sports</h3>
+        <p class="text-sm mt-2">Thrill-seeking activities like skydiving & bungee jumping.</p>
+        <p class="mt-2"><strong>Date:</strong> July 5, 2025</p>
+        <p><strong>Time:</strong> 9:00 AM</p>
+        <p><strong>Venue:</strong> Grand Canyon, Arizona</p>
+        <button class="mt-4 px-4 py-2 bg-purple-400 text-black font-bold rounded-lg hover:bg-purple-500 transition">Book Now</button>
+      </div>
+
+      <!-- Celebrity Meet & Greet -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-xl font-bold text-orange-300">🔥 Celebrity Meet & Greet</h3>
+        <p class="text-sm mt-2">Meet your favorite celebrities in person!</p>
+        <p class="mt-2"><strong>Date:</strong> August 10, 2025</p>
+        <p><strong>Time:</strong> 5:00 PM</p>
+        <p><strong>Venue:</strong> Hollywood Boulevard</p>
+        <button class="mt-4 px-4 py-2 bg-orange-400 text-black font-bold rounded-lg hover:bg-orange-500 transition">Book Now</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ONGOING EVENTS SECTION -->
+
+
+<!-- COMING SOON SECTION -->
+<section class="py-16 bg-gradient-to-r from-rose-500 to-pink-500 text-white">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold uppercase tracking-widest mb-12">Comingsoon...</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Entertainment Events -->
+      <div>
+        <h3 class="text-3xl font-bold text-yellow-300 mb-4">🎭 Entertainment Events</h3>
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Concerts & Music Festivals
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Stand-up Comedy Shows
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Theater & Live Performances
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Movie Premieres & Screenings
+          </div>
+        </div>
+      </div>
+
+      <!-- Sports Events -->
+      <div>
+        <h3 class="text-3xl font-bold text-green-300 mb-4">🏆 Sports Events</h3>
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Football, Cricket, Basketball Matches
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Marathons & Fitness Challenges
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Esports & Gaming Tournaments
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Wrestling, MMA, and Boxing Fights
+          </div>
+        </div>
+      </div>
+
+      <!-- Educational Events -->
+      <div>
+        <h3 class="text-3xl font-bold text-blue-300 mb-4">🎓 Educational & Career Events</h3>
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Tech Conferences & Seminars
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Business & Startup Meetups
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Coding Hackathons & Workshops
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ College Fests & Competitions
+          </div>
+        </div>
+      </div>
+
+      <!-- Community & Cultural Events -->
+      <div>
+        <h3 class="text-3xl font-bold text-red-300 mb-4">🌍 Community & Cultural Events</h3>
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Food & Drink Festivals
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Cultural & Traditional Celebrations
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Fashion Shows & Art Exhibitions
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Charity & Fundraising Events
+          </div>
+        </div>
+      </div>
+
+      <!-- Travel & Adventure Events -->
+      <div>
+        <h3 class="text-3xl font-bold text-purple-300 mb-4">🏕 Travel & Adventure Events</h3>
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Trekking & Camping Trips
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Wildlife Safari & Road Trips
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Beach & Yacht Parties
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Adventure Sports (Skydiving, Bungee Jumping)
+          </div>
+        </div>
+      </div>
+
+      <!-- Special & Trending Events -->
+      <div>
+        <h3 class="text-3xl font-bold text-orange-300 mb-4">🔥 Special & Trending Events</h3>
+        <div class="space-y-4">
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ New Year & Seasonal Parties
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Product Launches & Tech Expos
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Celebrity Meet & Greets
+          </div>
+          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg shadow-md hover:scale-105 transition transform duration-300">
+            ✔️ Book Signings & Fan Conventions
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- COMING SOON SECTION END -->
+
+
+  
+
+  
+  <!-- FOOTER SECTION -->
+<footer class="bg-gray-900 text-white py-10">
+  <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
+    
+    <!-- About Section -->
+    <div>
+      <h3 class="text-xl font-bold text-yellow-400">About Us</h3>
+      <p class="text-gray-400 mt-2 text-sm">
+        Ticket-Lelo is your go-to platform for booking tickets to the best movies, concerts, and events. 
+        Experience seamless booking and exclusive deals!
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-xl font-bold text-yellow-400">Quick Links</h3>
+      <ul class="mt-2 space-y-2">
+        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Events</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Contact</a></li>
+        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Section -->
+     
+    <div>
+      <h3 class="text-xl font-bold text-yellow-400">Contact Us</h3>
+      <p class="text-gray-400 mt-2 text-sm">
+        📍 123 Event Street, City, Country <br>
+        📞 +123 456 7890 <br>
+        ✉ support@ticketlelo.com
+      </p>
+    </div>
+  </div>
+
+  <!-- Social Media & Copyright -->
+  <div class="mt-10 text-center border-t border-gray-700 pt-4">
+    <p class="text-sm text-gray-400">&copy; 2025 Ticket-Lelo. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 mt-2">
+      <a href="#" class="text-blue-400 hover:text-blue-300 transition">Facebook</a>
+      <a href="#" class="text-blue-400 hover:text-blue-300 transition">Twitter</a>
+      <a href="#" class="text-blue-400 hover:text-blue-300 transition">Instagram</a>
+    </div>
+  </div>
+</footer>
+ <!-- FOOTER SECTION -->
+
+
+  <script src="index.js"></script>
+  <script>
+  const carousel = document.getElementById("carousel");
+let scrollAmount = 0;
+
+function autoSlide() {
+  if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+    scrollAmount = 0;
+  } else {
+    scrollAmount += 300;
+  }
+  carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+}
+
+let slideInterval = setInterval(autoSlide, 3000); // Auto-slide every 3s
+
+// Pause on hover
+carousel.addEventListener("mouseenter", () => clearInterval(slideInterval));
+carousel.addEventListener("mouseleave", () => slideInterval = setInterval(autoSlide, 3000));
+
+// Enable manual scrolling
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener("mousedown", (e) => {
+  isDown = true;
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+carousel.addEventListener("mouseleave", () => isDown = false);
+carousel.addEventListener("mouseup", () => isDown = false);
+carousel.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 2; // Scroll speed
+  carousel.scrollLeft = scrollLeft - walk;
+});
+</script>
+
+
+</body>
+</html>
