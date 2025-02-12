@@ -1,154 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOME PAGE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME PAGE - Ticket-Lelo</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="index.css">
+  <style>
+    /* Hide scrollbar for carousel */
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-track {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  </style>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body class="bg-gray-100 text-gray-900">
   
-
-  
   <!-- HEADER SECTION -->
-<!-- HEADER SECTION -->
-<header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-pink-600 via-rose-500 to-red-500 shadow-xl p-3 flex items-center justify-between">
-  <!-- Left: Logo & Title -->
-  <div class="flex items-center space-x-5">
-    <img src="ambuj5.png" alt="Profile Logo" class="w-14 h-14 rounded-full shadow-lg hover:scale-110">
-    <h2 class="text-3xl font-extrabold text-white tracking-widest uppercase drop-shadow-xl hover:scale-110">
-      Ticket-Lelo
-    </h2>
-  </div>
-  
-  <!-- Desktop: Search & Navigation -->
-  <div class="hidden md:flex items-center space-x-6">
-    <!-- Search Bar -->
-    <div class="flex items-center bg-white/20 backdrop-blur-lg rounded-lg px-6 shadow-md w-1/2">
-      <input type="text" placeholder="Search events..." 
-             class="px-2 py-2 bg-transparent text-white placeholder-white focus:outline-none w-full">
-      <button class="ml-2 py-2 px-4 text-white font-bold rounded-md hover:bg-red-600 transition">
-        🔍
+  <header class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-pink-600 via-rose-500 to-red-500 shadow-xl p-3 flex items-center justify-between">
+    <!-- Logo & Title -->
+    <div class="flex items-center space-x-5">
+      <img src="ambuj5.png" alt="Profile Logo" class="w-14 h-14 rounded-full shadow-lg hover:scale-110" />
+      <h2 class="text-3xl font-extrabold text-white tracking-widest uppercase drop-shadow-xl hover:scale-110">
+        Ticket-Lelo
+      </h2>
+    </div>
+
+    <!-- Desktop Navigation (hidden on mobile) -->
+    <div class="hidden md:flex items-center space-x-6">
+      <!-- Search Bar -->
+      <div class="flex items-center bg-white/20 backdrop-blur-lg rounded-lg px-6 shadow-md w-1/2">
+        <input type="text" placeholder="Search events..." class="px-2 py-2 bg-transparent text-white placeholder-white focus:outline-none w-full" />
+        <button class="ml-2 py-2 px-4 text-white font-bold rounded-md hover:bg-red-600 transition">
+          🔍
+        </button>
+      </div>
+      <!-- Navigation Links -->
+      <nav class="flex space-x-6">
+        <a href="#" class="text-white hover:scale-110 font-bold hover:text-yellow-400 transition duration-200">Home</a>
+        <a href="#" class="text-white hover:scale-110 font-bold hover:text-yellow-400 transition duration-200">Events</a>
+        <a href="#" class="text-white hover:scale-110 font-bold hover:text-yellow-400 transition duration-200">Contact</a>
+        <a href="signup.html" class="bg-yellow-400 hover:scale-110 text-black font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition">
+          Signup
+        </a>
+        <a href="login.html" class="bg-yellow-400 hover:scale-110 text-black font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition">
+          Login
+        </a>
+      </nav>
+    </div>
+
+    <!-- Mobile Hamburger Icon (visible only on small screens) -->
+    <div class="md:hidden flex items-center">
+      <button id="mobile-menu-button" class="text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
       </button>
     </div>
-    <!-- Navigation Links -->
-    <nav class="flex space-x-6">
-      <a href="#" class="text-white hover:scale-110 font-bold hover:text-yellow-400 transition duration-200">Home</a>
-      <a href="#" class="text-white hover:scale-110 font-bold hover:text-yellow-400 transition duration-200">Events</a>
-      <a href="#" class="text-white hover:scale-110 font-bold hover:text-yellow-400 transition duration-200">Contact</a>
-      <a href="signup.html" class="bg-yellow-400 hover:scale-110 text-black font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 hover:shadow-lg transition">
+  </header>
+  <!-- HEADER SECTION END -->
+
+  <!-- MOBILE MENU (Visible on Mobile Only) -->
+  <!-- Using fixed positioning so the menu appears directly below the header -->
+  <div id="mobile-menu" class="fixed top-16 left-0 w-full bg-gradient-to-r from-pink-600 via-rose-500 to-red-500 text-white md:hidden hidden z-40">
+    <!-- Mobile Search Bar -->
+    <div class="px-4 py-2">
+      <div class="flex items-center bg-white/20 backdrop-blur-lg rounded-lg px-4 shadow-md">
+        <input type="text" placeholder="Search events..." class="px-2 py-2 bg-transparent text-white placeholder-white focus:outline-none w-full" />
+        <button class="ml-2 py-2 px-4 text-white font-bold rounded-md hover:bg-red-600 transition">
+          🔍
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Links -->
+    <nav class="flex flex-col space-y-2 px-4 py-2">
+      <a href="#" class="block text-white hover:text-yellow-400 transition">Home</a>
+      <a href="#" class="block text-white hover:text-yellow-400 transition">Events</a>
+      <a href="#" class="block text-white hover:text-yellow-400 transition">Contact</a>
+      <a href="signup.html" class="block bg-yellow-400 text-black font-semibold text-center px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition">
         Signup
       </a>
-      <a href="login.html" class="bg-yellow-400 hover:scale-110 text-black font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 hover:shadow-lg transition">
+      <a href="login.html" class="block bg-yellow-400 text-black font-semibold text-center px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition">
         Login
       </a>
     </nav>
   </div>
-  
-  <!-- Mobile: Hamburger Icon -->
-  <div class="md:hidden flex items-center">
-    <button id="mobile-menu-button" class="text-white focus:outline-none">
-      <!-- Hamburger Icon -->
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-           xmlns="http://www.w3.org/2000/svg">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                 d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </div>
-</header>
-<!-- HEADER SECTION END -->
+  <!-- MOBILE MENU END -->
 
-<!-- MOBILE MENU (Visible on Mobile Only) -->
-<div id="mobile-menu" class="md:hidden bg-gradient-to-r from-pink-600 via-rose-500 to-red-500 text-white absolute top-16 left-0 w-full hidden">
-  <!-- Mobile Search Bar -->
-  <div class="px-4 py-2">
-    <div class="flex items-center bg-white/20 backdrop-blur-lg rounded-lg px-4 shadow-md">
-      <input type="text" placeholder="Search events..." 
-             class="px-2 py-2 bg-transparent text-white placeholder-white focus:outline-none w-full">
-      <button class="ml-2 py-2 px-4 text-white font-bold rounded-md hover:bg-red-600 transition">
-        🔍
-      </button>
-    </div>
-  </div>
-  <!-- Mobile Navigation Links -->
-  <nav class="flex flex-col space-y-2 px-4 py-2">
-    <a href="#" class="block text-white hover:text-yellow-400 transition">Home</a>
-    <a href="#" class="block text-white hover:text-yellow-400 transition">Events</a>
-    <a href="#" class="block text-white hover:text-yellow-400 transition">Contact</a>
-    <a href="signup.html" class="block bg-yellow-400 text-black font-semibold text-center px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition">
-      Signup
-    </a>
-    <a href="login.html" class="block bg-yellow-400 text-black font-semibold text-center px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500 transition">
-      Login
-    </a>
-  </nav>
-</div>
-<!-- HEADER SECTION END -->
+  <!-- MAIN CONTENT (includes HERO & SLIDE sections) -->
+  <main class="pt-20">
+    <!-- HERO SECTION -->
+    <section class="relative h-96 flex items-center justify-center text-white bg-gradient-to-r from-rose-500 to-pink-500">
+      <div class="text-center">
+        <h1 class="text-5xl font-bold animate-bounce">Book Your Tickets Now!</h1>
+        <p class="text-lg mt-2">Movies, Concerts, Sports & More</p>
+        <a href="#events" class="mt-6 inline-block hover:scale-110 px-6 py-3 bg-yellow-400 text-black rounded-lg hover:bg-yellow-600">Explore Now</a>
+      </div>
+    </section>
 
-  
-
-  <!-- HERO SECTION -->
-<section class="relative h-96 flex items-center justify-center text-white bg-gradient-to-r from-rose-500 to-pink-500">
-  <div class="text-center">
-    <h1 class="text-5xl font-bold animate-bounce">Book Your Tickets Now!</h1>
-    <p class="text-lg mt-2">Movies, Concerts, Sports & More</p>
-    <a href="#events" class="mt-6 inline-block hover:scale-110 px-6 py-3 bg-yellow-400 text-black rounded-lg hover:bg-yellow-600">Explore Now</a>
-  </div>
-</section>
-
-<!-- SLIDE SECTION -->
-<section class="flex items-center justify-center bg-gradient-to-r from-rose-500 to-pink-500 py-10">
-  <div class="relative w-full max-w-4xl overflow-hidden">
-    <!-- Carousel Container -->
-    <div id="carousel" class="carousel-track flex gap-4 overflow-x-auto scroll-smooth">
-      <!-- Card 1 -->
-      <a href="https://example.com/1" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-400 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
-        <h2 class="text-3xl font-bold">Card 1</h2>
-        <p class="text-black mt-4 text-lg">Click to visit Page 1</p>
-      </a>
-      <!-- Card 2 -->
-      <a href="https://example.com/2" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-500 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
-        <h2 class="text-3xl font-bold">Card 2</h2>
-        <p class="text-black mt-4 text-lg">Click to visit Page 2</p>
-      </a>
-      <!-- Card 3 -->
-      <a href="https://example.com/3" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-600 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
-        <h2 class="text-3xl font-bold">Card 3</h2>
-        <p class="text-black mt-4 text-lg">Click to visit Page 3</p>
-      </a>
-      <!-- Card 4 -->
-      <a href="https://example.com/4" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-700 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
-        <h2 class="text-3xl font-bold">Card 4</h2>
-        <p class="text-black mt-4 text-lg">Click to visit Page 4</p>
-      </a>
-      <!-- Card 5 -->
-      <a href="https://example.com/5" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-800 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
-        <h2 class="text-3xl font-bold">Card 5</h2>
-        <p class="text-black mt-4 text-lg">Click to visit Page 5</p>
-      </a>
-    </div>
-  </div>
-  <style>
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .carousel-track::-webkit-scrollbar {
-      display: none;
-    }
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .carousel-track {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    }
-  </style>
-</section>
-
-
-
- 
-
-  
-  <!-- QUOTE SECTION -->
+    <!-- SLIDE SECTION -->
+    <section class="flex items-center justify-center bg-gradient-to-r from-rose-500 to-pink-500 py-10">
+      <div class="relative w-full max-w-4xl overflow-hidden">
+        <div id="carousel" class="carousel-track flex gap-4 overflow-x-auto scroll-smooth">
+          <!-- Card 1 -->
+          <a href="https://example.com/1" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-400 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+            <h2 class="text-3xl font-bold">Card 1</h2>
+            <p class="text-black mt-4 text-lg">Click to visit Page 1</p>
+          </a>
+          <!-- Card 2 -->
+          <a href="https://example.com/2" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-500 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+            <h2 class="text-3xl font-bold">Card 2</h2>
+            <p class="text-black mt-4 text-lg">Click to visit Page 2</p>
+          </a>
+          <!-- Card 3 -->
+          <a href="https://example.com/3" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-600 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+            <h2 class="text-3xl font-bold">Card 3</h2>
+            <p class="text-black mt-4 text-lg">Click to visit Page 3</p>
+          </a>
+          <!-- Card 4 -->
+          <a href="https://example.com/4" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-700 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+            <h2 class="text-3xl font-bold">Card 4</h2>
+            <p class="text-black mt-4 text-lg">Click to visit Page 4</p>
+          </a>
+          <!-- Card 5 -->
+          <a href="https://example.com/5" target="_blank" class="card w-full min-w-[300px] p-10 bg-yellow-800 rounded-2xl shadow-2xl text-center hover:scale-105 transition">
+            <h2 class="text-3xl font-bold">Card 5</h2>
+            <p class="text-black mt-4 text-lg">Click to visit Page 5</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- QUOTE SECTION -->
 <section class="py-12 flex justify-center items-center bg-gradient-to-r from-rose-500 to-pink-500 text-white">
   <div class="max-w-3xl mx-auto p-8 rounded-xl shadow-lg bg-white/30  border hover:scale-105 border-white/20 text-center">
       <h2 class="text-2xl font-bold tracking-wide italic">
@@ -394,108 +381,88 @@
 <!-- COMING SOON SECTION END -->
 
 
-  
+</main>
 
-  
   <!-- FOOTER SECTION -->
-<footer class="bg-gray-900 text-white py-10">
-  <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
-    
-    <!-- About Section -->
-    <div>
-      <h3 class="text-xl font-bold text-yellow-400">About Us</h3>
-      <p class="text-gray-400 mt-2 text-sm">
-        Ticket-Lelo is your go-to platform for booking tickets to the best movies, concerts, and events. 
-        Experience seamless booking and exclusive deals!
-      </p>
+  <footer class="bg-gray-900 text-white py-10">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
+      <!-- About Section -->
+      <div>
+        <h3 class="text-xl font-bold text-yellow-400">About Us</h3>
+        <p class="text-gray-400 mt-2 text-sm">
+          Ticket-Lelo is your go-to platform for booking tickets to the best movies, concerts, and events.
+          Experience seamless booking and exclusive deals!
+        </p>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xl font-bold text-yellow-400">Quick Links</h3>
+        <ul class="mt-2 space-y-2">
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Events</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Contact</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <!-- Contact Section -->
+      <div>
+        <h3 class="text-xl font-bold text-yellow-400">Contact Us</h3>
+        <p class="text-gray-400 mt-2 text-sm">
+          📍 123 Event Street, City, Country <br>
+          📞 +123 456 7890 <br>
+          ✉ support@ticketlelo.com
+        </p>
+      </div>
     </div>
-
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-xl font-bold text-yellow-400">Quick Links</h3>
-      <ul class="mt-2 space-y-2">
-        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Home</a></li>
-        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Events</a></li>
-        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Contact</a></li>
-        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition">Privacy Policy</a></li>
-      </ul>
+    <div class="mt-10 text-center border-t border-gray-700 pt-4">
+      <p class="text-sm text-gray-400">&copy; 2025 Ticket-Lelo. All rights reserved.</p>
+      <div class="flex justify-center space-x-4 mt-2">
+        <a href="#" class="text-blue-400 hover:text-blue-300 transition">Facebook</a>
+        <a href="#" class="text-blue-400 hover:text-blue-300 transition">Twitter</a>
+        <a href="#" class="text-blue-400 hover:text-blue-300 transition">Instagram</a>
+      </div>
     </div>
+  </footer>
 
-    <!-- Contact Section -->
-     
-    <div>
-      <h3 class="text-xl font-bold text-yellow-400">Contact Us</h3>
-      <p class="text-gray-400 mt-2 text-sm">
-        📍 123 Event Street, City, Country <br>
-        📞 +123 456 7890 <br>
-        ✉ support@ticketlelo.com
-      </p>
-    </div>
-  </div>
-
-  <!-- Social Media & Copyright -->
-  <div class="mt-10 text-center border-t border-gray-700 pt-4">
-    <p class="text-sm text-gray-400">&copy; 2025 Ticket-Lelo. All rights reserved.</p>
-    <div class="flex justify-center space-x-4 mt-2">
-      <a href="#" class="text-blue-400 hover:text-blue-300 transition">Facebook</a>
-      <a href="#" class="text-blue-400 hover:text-blue-300 transition">Twitter</a>
-      <a href="#" class="text-blue-400 hover:text-blue-300 transition">Instagram</a>
-    </div>
-  </div>
-</footer>
- <!-- FOOTER SECTION -->
-
-
-  <script src="index.js"></script>
+  <!-- Carousel Script -->
   <script>
-  const carousel = document.getElementById("carousel");
-let scrollAmount = 0;
+    const carousel = document.getElementById("carousel");
+    let scrollAmount = 0;
+    function autoSlide() {
+      if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+        scrollAmount = 0;
+      } else {
+        scrollAmount += 300;
+      }
+      carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+    }
+    let slideInterval = setInterval(autoSlide, 3000);
+    carousel.addEventListener("mouseenter", () => clearInterval(slideInterval));
+    carousel.addEventListener("mouseleave", () => slideInterval = setInterval(autoSlide, 3000));
+    let isDown = false, startX, scrollLeft;
+    carousel.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+    });
+    carousel.addEventListener("mouseleave", () => isDown = false);
+    carousel.addEventListener("mouseup", () => isDown = false);
+    carousel.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 2;
+      carousel.scrollLeft = scrollLeft - walk;
+    });
+  </script>
 
-function autoSlide() {
-  if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-    scrollAmount = 0;
-  } else {
-    scrollAmount += 300;
-  }
-  carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
-}
-
-let slideInterval = setInterval(autoSlide, 3000); // Auto-slide every 3s
-
-// Pause on hover
-carousel.addEventListener("mouseenter", () => clearInterval(slideInterval));
-carousel.addEventListener("mouseleave", () => slideInterval = setInterval(autoSlide, 3000));
-
-// Enable manual scrolling
-let isDown = false;
-let startX;
-let scrollLeft;
-
-carousel.addEventListener("mousedown", (e) => {
-  isDown = true;
-  startX = e.pageX - carousel.offsetLeft;
-  scrollLeft = carousel.scrollLeft;
-});
-carousel.addEventListener("mouseleave", () => isDown = false);
-carousel.addEventListener("mouseup", () => isDown = false);
-carousel.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - carousel.offsetLeft;
-  const walk = (x - startX) * 2; // Scroll speed
-  carousel.scrollLeft = scrollLeft - walk;
-});
-</script>
-<!-- SCRIPT TO TOGGLE MOBILE MENU -->
-<script>
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
-
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
